@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Марио — Сантехника в Арамиле</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo">МАРИО<span>сантехника</span></div>
+            <div class="contact-info">
+                <!-- В шапке оставим телефон кликабельным для удобства, но без синего цвета -->
+                <a href="tel:+79025007702" class="phone">+7 (902) 500-77-02</a>
+                <p>г. Арамиль, ул. Химиков, 2</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Сантехника в Арамиле</h1>
+                <p>Большой выбор труб, кранов и смесителей. Поможем подобрать всё для ремонта.</p>
+                <a href="tel:+79025007702" class="btn">Позвонить</a>
+                <a href="https://vk.ru/club205615757" target="_blank" class="btn btn-outline">Написать в ВК</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- АКЦИЯ МЕСЯЦА -->
+    <section class="promo">
+        <div class="container promo-container">
+            <div class="promo-text">
+                <h2 style="text-align: left; margin-bottom: 20px; color: #e11d48;">Шок цена!</h2>
+                <h3 style="font-size: 2rem; margin-bottom: 15px; color: #1e3a8a;">Унитаз-компакт за 5 400 ₽</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">Только до конца ноября!</p>
+                <div class="promo-gift">
+                    <strong>🎁 Гофра + гибкая подводка в подарок!</strong>
+                </div>
+            </div>
+            <div class="promo-image">
+                <img src="promo.jpg" alt="Акция месяца - Унитаз за 5400">
+            </div>
+        </div>
+    </section>
+
+    <!-- ТОВАРЫ -->
+    <section class="products">
+        <div class="container">
+            <h2>Популярные категории</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="pipe.jpg" alt="Трубы">
+                    <h3>Трубы и фитинги</h3>
+                    <p>Полипропилен, металлопластик, ПНД.</p>
+                </div>
+                <div class="card">
+                    <img src="faucet.jpg" alt="Смесители">
+                    <h3>Смесители</h3>
+                    <p>Для кухни и ванной. Надежные бренды.</p>
+                </div>
+                <div class="card">
+                    <img src="bath.jpg" alt="Ванны">
+                    <h3>Ванны и душевые</h3>
+                    <p>Кабины, поддоны, аксессуары.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАЛЬКУЛЯТОР -->
+    <section class="calculator">
+        <div class="container">
+            <h2>Калькулятор количества труб</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Посчитайте примерный метраж труб для вашей комнаты.</p>
+            <div class="calc-box">
+                <label>Длина комнаты (м):</label>
+                <input type="number" id="length" placeholder="Например, 4">
+
+                <label>Ширина комнаты (м):</label>
+                <input type="number" id="width" placeholder="Например, 3">
+
+                <label>Высота стен (м):</label>
+                <input type="number" id="height" placeholder="Например, 2.7">
+
+                <!-- Кнопка без onclick, работает через script.js -->
+                <button class="btn" id="calc-btn">Рассчитать</button>
+                <div id="result" class="result-box"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h2>Контакты</h2>
+                <p>Адрес: г. Арамиль, ул. Химиков, 2</p>
+                <p>Телефон: +7 (902) 500-77-02</p>
+                <p>Почта: safarova_firyuza@mail.ru</p>
+            </div>
+            <div>
+                <h2>Режим работы</h2>
+                <p>Пн — Пт: 08:00 – 20:00</p>
+                <p>Суббота: 10:00 – 17:00</p>
+                <p>Воскресенье: Выходной</p>
+            </div>
+        </div>
+        <div class="container">
+            <p class="copy">© 2026 Марио. Сайт разработан JorgenTech.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

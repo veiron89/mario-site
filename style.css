@@ -1,0 +1,108 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ШАПКА */
+header {
+    background: #fff; padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky; top: 0; z-index: 100;
+    border-bottom: 3px solid #e11d48; /* Красная полоса */
+}
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 2rem; font-weight: 800; color: #1e3a8a; line-height: 1; }
+.logo span { display: block; font-size: 0.8rem; font-weight: 400; color: #e11d48; letter-spacing: 2px; text-transform: uppercase; }
+.contact-info { text-align: right; }
+.phone { font-size: 1.2rem; font-weight: 700; color: #e11d48; text-decoration: none; }
+.contact-info p { font-size: 0.85rem; color: #666; }
+
+/* ГЛАВНЫЙ ЭКРАН */
+.hero {
+    background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.85)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+    padding: 100px 0; color: #fff; text-align: center;
+}
+.hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9; }
+
+/* КНОПКИ */
+.btn {
+    display: inline-block; background: #e11d48; color: #fff; /* Красная кнопка */
+    padding: 15px 40px; text-decoration: none; border-radius: 5px;
+    font-weight: 600; font-size: 1.1rem; transition: background 0.3s;
+    margin: 0 10px; border: none; cursor: pointer;
+}
+.btn:hover { background: #be123c; }
+.btn-outline { background: transparent; border: 2px solid #fff; }
+.btn-outline:hover { background: #fff; color: #e11d48; }
+
+/* СЕКЦИИ */
+section { padding: 70px 0; }
+h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; color: #1e3a8a; }
+
+/* АКЦИЯ */
+.promo { background: #fff; border-bottom: 5px solid #e11d48; }
+.promo-container { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.promo-text { flex: 1; }
+.promo-image { flex: 1; text-align: right; }
+.promo-image img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.promo-gift {
+    display: inline-block; background: #fee2e2; color: #be123c;
+    padding: 15px 25px; border-radius: 8px; font-size: 1.2rem;
+    border: 2px dashed #e11d48; font-weight: 700;
+}
+
+/* ТОВАРЫ */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+.card {
+    background: #fff; border-radius: 8px; overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease;
+    border: 1px solid #eee; border-top: 4px solid #1e3a8a; /* Синий акцент */
+}
+.card:hover { transform: translateY(-5px); }
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card h3 { font-size: 1.2rem; margin: 20px 20px 10px; color: #e11d48; } /* Красный заголовок */
+.card p { color: #555; font-size: 0.95rem; margin: 0 20px 20px; }
+
+/* КАЛЬКУЛЯТОР */
+.calculator { background: #f4f7f6; }
+.calc-box {
+    max-width: 500px; margin: 0 auto; background: #fff;
+    padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: left; border-top: 5px solid #e11d48;
+}
+.calc-box label { display: block; margin-bottom: 5px; font-weight: 600; color: #1e3a8a;}
+.calc-box input {
+    width: 100%; padding: 10px; margin-bottom: 20px;
+    border: 1px solid #ccc; border-radius: 5px; font-family: 'Inter', sans-serif;
+}
+.calc-box button { width: 100%; margin: 0; }
+.result-box { margin-top: 20px; font-weight: 700; color: #1e3a8a; font-size: 1.2rem; text-align: center; }
+
+/* ПОДВАЛ */
+footer { background: #1e3a8a; color: #fff; padding: 60px 0 30px; border-top: 5px solid #e11d48; }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+footer h2 { color: #fff; margin-bottom: 20px; text-align: left; font-size: 1.5rem; }
+footer p { margin-bottom: 10px; font-size: 1.1rem; }
+footer a { color: #fca5a5; text-decoration: none; } /* Светло-красный для ссылок */
+footer a:hover { text-decoration: underline; color: #fff; }
+.copy { font-size: 0.8rem; opacity: 0.6; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+
+/* АДАПТИВ */
+@media (max-width: 768px) {
+    .header-inner { flex-direction: column; text-align: center; gap: 15px; }
+    .contact-info { text-align: center; }
+    .hero h1 { font-size: 2.2rem; }
+    .btn { display: block; margin: 10px auto; width: 100%; max-width: 300px; }
+    .promo-container { flex-direction: column; text-align: center; }
+    .promo-text h2 { text-align: center !important; }
+    .promo-image { text-align: center; margin-top: 20px; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    footer h2 { text-align: center; }
+}
